@@ -4,15 +4,25 @@ from django.http import HttpResponse
 
 def index(request) -> HttpResponse:
     context: dict[str, str] = {
-        'title': 'Home',
-        'content': 'Головна сторінка магазину - HOME',
-        'list': ['first', 'second', 'third'],
-        'dict': {'first': 1},
-        'is_authenticated': True
+        'title': 'Deluxe - Головна',
+        'content': 'Магазин побутової техніки DELUXE'
     }
 
     return render(request, 'main/index.html', context)
 
 
-def about(request) -> HttpResponse:
-    return HttpResponse('About page')
+def about(request):
+    context: dict[str, str] = {
+        'title': 'Deluxe - Про нас',
+        'content': 'Про нас',
+        'text_on_page': """ Інтернет-магазин техніки підтримує співпрацю з усіма виробниками побутової техніки. 
+                    Тому, у нас Ви знайдете усі необхідні товари саме тих виробників, які Вас цікавлять. 
+                    У наш магазин постійно додаються товари нових популярних моделей та знижуються ціни на старіші.    
+                    Ми розробили зручний для користування сайт нашого інтернет-магазину побутової техніки, щоб наші
+                    покупці відразу змогли знайти потрібний товар на сайті, його опис, характеристику, ціну та замовити.
+                    У нашому інтернет-магазині побутової техніки ми завжди проводимо різноманітні акції, знижки 
+                    та розіграші популярних товарів. "
+                    Тому, підписавшись на наші новини чи на соціальні мережі, Ви будете в курсі цих новинок."""
+    }
+
+    return render(request, 'main/about.html', context)
