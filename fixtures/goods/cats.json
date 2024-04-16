@@ -1,0 +1,58 @@
+[
+  {
+    "model": "goods.categories",
+    "pk": 2,
+    "fields": {
+      "name": "Всі товари",
+      "slug": "all-goods"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 3,
+    "fields": {
+      "name": "Холодильники",
+      "slug": "holodilniki"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 4,
+    "fields": {
+      "name": "Пральні машини",
+      "slug": "pralni-mashini"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 5,
+    "fields": {
+      "name": "Кавомашини",
+      "slug": "kavomashini"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 6,
+    "fields": {
+      "name": "Праски",
+      "slug": "praski"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 7,
+    "fields": {
+      "name": "Роботи-пилососи",
+      "slug": "roboti-pilososi"
+    }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 8,
+    "fields": {
+      "name": "Мікрохвильові печі",
+      "slug": "mikrohvilovi-pechi"
+    }
+  }
+]

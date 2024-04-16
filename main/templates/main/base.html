@@ -59,7 +59,7 @@
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Кошик</a></li>
                                 <li><a class="dropdown-item  text-white" href="users/profile.html">Особистий кабінет</a>
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Адмін панель</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Адмін панель</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -88,13 +88,9 @@
                              height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Весь асортимент товарів</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Холодильники</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Пральні машини</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Кавомашини</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Праски</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Роботи-пилососи</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Мікрохвильові печі</a></li>
+                        {% for category in categories %}
+                            <li><a class="dropdown-item text-white" href="{% url "catalog:index" %}">{{ category.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- Значок кошика, викликає модальне вікно -->

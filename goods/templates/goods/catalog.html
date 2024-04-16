@@ -40,283 +40,33 @@
                                 <button type="submit" class="btn btn-primary mx-3 mt-3">Прийняти</button>
                             </form>
                         </div>
-                        <!-- Карта товара -->
+
+
+                        {%for product in goods %}
+                            <!-- Карта товара -->
                         <div class="col-lg-4 col-md-6 p-4">
                             <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/set of tea table and three chairs.jpg" class="card-img-top" alt="...">
+                                <img src="{% static product.image %}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <a href="../goods/product.html">
-                                        <p class="card-title">Холодильник SAMSUNG RB33J3</p>
+                                        <p class="card-title">{{ product.name }}</p>
                                     </a>
-                                    <p class="card-text text-truncate">Двокамерний холодильник, об'ємом 350л, система розморожування суха, клас енергоспоживання А++.</p>
+                                    <p class="card-text text-truncate">{{ product.description }}</p>
                                     <p class="product_id">id: 02265</p>
                                     <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
+{#                                        <p><s>100</s> $</p>#}
+{#                                        <p><strong>90.00 $</strong></p>#}
+{#                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>#}
+                                        <p><strong>{{ product.price }}</strong></p>
                                         <a href="#" class="btn add-to-cart">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
+                                            <img class="mx-1" src="{% static "/deps/icons/cart-plus.svg" %}" alt="Catalog Icon"
                                                 width="32" height="32">
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/set of tea table and two chairs.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Холодильник BOSCH KGN39</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Двокамерний холодильник, об'ємом 400л, система розморожування суха, клас енергоспоживання А++.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn add-to-cart">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/double bed.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Мікрохвильова піч Whirlpool MWP 101SB</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Об'єм 20л, максимальна потужність 700Вт, спосіб приготування: мікрохвилі.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/kitchen table.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Мікрохвильова піч GORENJE MO17E1</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Об'єм 17л, максимальна потужність 700Вт, спосіб приготування: мікрохвилі.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/kitchen table 2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Прасувальна система TEFAL IXEO POWER QT2020</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Паровий удар, г/хв:200, 3 режими, подача пари до 90 г/хв.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/corner sofa.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Прасувальна система PHILIPS All-In-One 8500</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Паровий удар, г/хв:300, 3 режими, подача пари до 90 г/хв.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/bedside table.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Кавомашина PHILIPS Series 5400</p>
-                                    </a>
-                                    <p class="card-text text-truncate">12 видів кавових напоїв, молочна система LatteGo, 4 профілі користувача.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/sofa.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Кавомашина KRUPS Essential</p>
-                                    </a>
-                                    <p class="card-text text-truncate">10 видів кавових напоїв, 3 режими температури, 3 ступені мелення кави.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/office chair.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Пральна машина Bosch WAN28262</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Кількість програм: 16, клас енергоспоживання: А+++, максимальне завантаження: 8 кг.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/plants.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Пральна машина INDESIT OMTWSE 61051</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Кількість програм: 16, клас енергоспоживання: А+++, максимальне завантаження: 6 кг.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/flower.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Робот-пилосос Rowenta X-PLORER</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Тип прибирання: сухе та вологе, тип фільтра: HEPA, рівень шуму, дБ: 65.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Карта товара -->
-                        <div class="col-lg-4 col-md-6 p-4">
-                            <div class="card border-primary rounded custom-shadow">
-                                <img src="../deps/images/goods/strange table.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <a href="#">
-                                        <p class="card-title">Робот-пилосос Xiaomi Robot Vacuum S10+</p>
-                                    </a>
-                                    <p class="card-text text-truncate">Тип прибирання: сухе та вологе, тип фільтра: HEPA, рівень шуму, дБ: 55.</p>
-                                    <p class="product_id">id: 02265</p>
-                                    <div class="d-flex justify-content-between">
-                                        <p><s>100</s> $</p>
-                                        <p><strong>90.00 $</strong></p>
-                                        <span class="badge bg-warning text-dark">Знижка 10.00 %</span>
-                                        <!-- <p><strong>100.00 $</strong></p> -->
-                                        <a href="#" class="btn">
-                                            <img class="mx-1" src="../deps/icons/cart-plus.svg" alt="Catalog Icon"
-                                                width="32" height="32">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        {% endfor %}
                     </div>
                     <!-- Пагинация -->
                     <nav aria-label="Page navigation example">
@@ -335,8 +85,6 @@
                         </ul>
                     </nav>
 {% endblock %}
-
-
 
 {% block footer %}
 <footer class="py-4 bg-dark">
