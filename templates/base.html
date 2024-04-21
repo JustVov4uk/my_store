@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href={% static "deps/css/bootstrap/bootstrap.min.css" %}>
     <link rel="stylesheet" href={% static "deps/css/my_css.css" %}>
-    <!-- Стиль footer-a для главной страницы -->
+    <!-- Стиль footer-a для головної сторінки -->
     {% block css %}
 
     {% endblock %}
@@ -49,7 +49,7 @@
                             <a class="nav-link  text-white" href="carts/cart.html">Кошик</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  text-white" href="users/login.html">Вхід</a>
+                            <a class="nav-link  text-white" href="{% url "user:login" %}">Вхід</a>
                         </li>
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle text-white" href="#" role="button"
@@ -58,13 +58,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Кошик</a></li>
-                                <li><a class="dropdown-item  text-white" href="users/profile.html">Особистий кабінет</a>
+                                <li><a class="dropdown-item  text-white" href="{% url "user:profile"%}">Особистий кабінет</a>
                                 </li>
                                 <li><a class="dropdown-item  text-white" href="{% url "admin:index" %}">Адмін панель</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Вихід</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "user:logout" %}">Вихід</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -78,7 +78,7 @@
     </header>
     <section>
         <div class="container">
-            <!-- Каталог и кошик з фіксованим розміщенням на сторінці -->
+            <!-- Каталог і кошик з фіксованим розміщенням на сторінці -->
             <div class="row mt-1 position-fixed z-3">
                 <!-- Каталог -->
                 <div class="dropdown mb-2">
@@ -116,7 +116,7 @@
                             <div class="modal-body">
                                 <h3 class="text-center mb-4">Кошик</h3>
                                 <div class="container" id="cart-items-container">
-                                    <!-- Разметка корзины -->
+                                    <!-- Розмітка коша -->
                                     <div class="card mb-3 text-bg-light shadow-lg">
                                         <div class="card-header">
                                             <h5 class="card-title">Товар</h5>
@@ -141,7 +141,7 @@
                                                     <div class="col p-0">
                                                         <p>x 100.00 = </p>
                                                     </div>
-                                                    <div class="col p-0"><strong>1000.00 грн</strong></div>
+                                                    <div class="col p-0"><strong>100.00 </strong></div>
                                                     <div class="col p-0">
                                                         <a href="#" class="remove-from-cart" data-cart-id="">
                                                             <img class="mx-1" src="{% static "deps/icons/trash3-fill.svg" %}"
@@ -158,7 +158,7 @@
                                             <h4 class="float-left"><strong>100.00 $</strong></h4>
                                         </div>
                                     </div>
-                                    <!-- Закончилась разметка корзины -->
+                                    <!-- Кінець розмітки коша -->
                                 </div>
                                 <a class="btn btn-dark" href="orders/create_order.html">
                                     Оформити замовлення
@@ -167,17 +167,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- Закончилась разметка модального окна -->
+                <!-- Кінець розмітки модального вікна -->
             </div>
         </div>
         <!-- Контент -->
         <div class="container">
             <div class="row mt-1">
                 <div class="col-lg-2">
-                    <!-- Пустой блок на Ваше усмотрение -->
+                    <!-- Пустий блок на ваш розсуд -->
                 </div>
                 <div class="col-lg-10">
-                    <!-- Контент на странице -->
+                    <!-- Контент на сторінці -->
                     {% block content %}
                     {% endblock %}
                 </div>
