@@ -1,0 +1,2 @@
+# my_store
+This is my e-store project, it is still in the development stage. It is developed using Django. The main functionality has already been implemented, but there are still nuances that need to be refined, specifically, registration, user account, and others. In a few days, the project will be fully ready, and I will provide a more precise technical description of the development stage from start to finish.
